@@ -2,9 +2,7 @@ version: '2.0'
 
 services:
   mongo:
-    image: 'mongo:3.4.4'
-    ports:
-      - '127.0.0.1:27017:27017'
+    image: 'mongo'
     volumes:
       - 'mongo:/data/db'
 
@@ -18,7 +16,7 @@ services:
       dockerfile: Dockerfile
     command: node server.js -p 80 --mongoServer mongo --waitForDatabase 5000
     ports:
-      - '80:80'
+      - '80'
     volumes:
       - './assets:/usr/src/app/assets'
       - './js:/usr/src/app/js'
