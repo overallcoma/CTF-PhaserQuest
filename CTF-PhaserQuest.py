@@ -36,7 +36,7 @@ for entry in npc_dialogues:
     dialogue_to_insert = npc_dialogues[entry]
     modify_npc_diaglogue(phaserquestdb_json, entry, dialogue_to_insert)
 
-item_messages = configinfo["items"]
+item_messages = configinfo["item-messages"]
 for entry in item_messages:
     message_to_insert = item_messages[entry]
     modify_item_dialogue(phaserquestdb_json, entry, message_to_insert)
